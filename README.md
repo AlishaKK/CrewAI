@@ -9,6 +9,13 @@
 **What is CrewAI?**  
 CrewAI is a framework for building AI agent teams with specialized roles, tools, and goals to tackle complex tasks collaboratively.  
 
+### CrewAI Components 
+
+1. **Crew**: The top-level manager that oversees AI teams, workflows, and ensures collaboration to deliver outcomes.  
+2. **AI Agents**: Specialized team members with roles (e.g., researcher, writer) that use tools, delegate tasks, and make decisions.  
+3. **Process**: A workflow system that manages task assignments, collaboration patterns, and execution efficiency.  
+4. **Tasks**: Clear, tool-driven assignments that contribute actionable results to the larger workflow.
+
 **How It Works**  
 - **Crew**: Oversees agent teams and workflows.  
 - **Agents**: Specialized team members making decisions and collaborating.  
