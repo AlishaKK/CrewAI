@@ -5,13 +5,18 @@ Routing classifies an input and directs it to a specialized followup task. This 
 ![image](https://github.com/user-attachments/assets/46266dd0-5c67-4c6e-9306-56cf18b9641d)
 
 import random
+
 from crewai.flow.flow import Flow, listen, router, start
+
 from pydantic import BaseModel
+
 
 class ExampleState(BaseModel):
     success_flag: bool = False
+    
 
 class RouterFlow(Flow[ExampleState]):
+
 
     @start()
     def start_method(self):
