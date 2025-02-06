@@ -12,6 +12,7 @@ from pydantic import BaseModel
 
 
 class ExampleState(BaseModel):
+
     success_flag: bool = False
     
 
