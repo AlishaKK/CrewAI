@@ -6,7 +6,11 @@
 ### **🚀 How It Works (Simple & Fast)**
 1️⃣ **Orchestrator:** Gives instructions to AI workers.  
 2️⃣ **Workers:** Complete subtasks (e.g., writing, refining, summarizing).  
-3️⃣ **Final Output:** The orchestrator combines results into one polished response.  
+3️⃣ **Final Output:** The orchestrator combines results into one polished response. 
+
+
+![image](https://github.com/user-attachments/assets/892e548e-81e1-4648-9d0e-a490305a94a8)
+
 
 ---
 
