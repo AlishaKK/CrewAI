@@ -1,19 +1,21 @@
-Your definitions are already clear and concise, but I’ve made minor improvements for better readability and consistency:  
+
 
 ---
 
 ### **Agentic System**  
 A system that independently makes decisions and takes actions to achieve goals.  
 
+- **Workflow:**  
+  - Follows predefined steps, not autonomous.  
+  - Uses pre-selected LLMs/tools controlled by code.  
+  - Executes fixed paths to complete tasks.
+    
 - **Agent:**  
   - Self-directed and autonomous.  
   - Dynamically selects LLMs/tools.  
   - Makes real-time decisions to complete tasks.  
 
-- **Workflow:**  
-  - Follows predefined steps, not autonomous.  
-  - Uses pre-selected LLMs/tools controlled by code.  
-  - Executes fixed paths to complete tasks.  
+ 
 
 ---
 
