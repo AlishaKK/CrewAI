@@ -1,10 +1,12 @@
 **Workflow: Evaluator-optimizer**
 
+**In the evaluator-optimizer workflow, one LLM call generates a response while another provides evaluation and feedback in a loop.**  
+
+
 
 ![image](https://github.com/user-attachments/assets/f9c802f8-f575-4110-92e6-e0dba78bfb3c)
 
 
-**In the evaluator-optimizer workflow, one LLM call generates a response while another provides evaluation and feedback in a loop.**  
 
 ---
 
