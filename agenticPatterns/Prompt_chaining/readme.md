@@ -26,6 +26,9 @@ Prompt chaining breaks a big task into **smaller, connected steps**, where each 
 
 It’s like **following a step-by-step recipe** instead of making everything at once! 🍽️🚀
 
+Here's the updated code with an additional function, `generate_intro`, that generates an introduction for the blog post based on the generated outline.
+
+Now, the flow includes an additional step where it generates an introduction for the blog post based on the outline. Let me know if you need further refinements! 🚀
 
 from crewai.flow.flow import Flow, start, listen
 from litellm import completion  # Replace with your preferred LLM API client
@@ -67,4 +70,5 @@ if __name__ == "__main__":
     final_outline = flow.kickoff()
     print("Final Output:")
     print(final_outline)
+
 
