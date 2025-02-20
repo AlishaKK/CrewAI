@@ -28,5 +28,55 @@ Prompt chaining breaks a big task into **smaller, connected steps**, where each 
 
 
 
+---
+
+### **🚀 How It Works (Step-by-Step)**  
+1️⃣ **AI generates a topic** → ✍️ Example: "Future of AI in 2025."  
+2️⃣ **AI uses that topic** → 📝 Creates a blog outline based on it.  
+3️⃣ **Results are linked** → 🔄 One response feeds into the next.  
+
+---
+
+### **💡 Simple Code Example: AI Generates a Topic & Outline**  
+
+```python
+from crewai.flow.flow import Flow, start, listen
+from litellm import completion  
+
+class TopicOutlineFlow(Flow):
+    model = "gpt-4o-mini"
+
+    @start()  # Step 1: AI generates a topic
+    def generate_topic(self):
+        response = completion(
+            model=self.model,
+            messages=[{"role": "user", "content": "Suggest a creative blog topic for 2025."}]
+        )
+        topic = response["choices"][0]["message"]["content"].strip()
+        print(f"\n📝 Blog Topic: {topic}")
+        return topic
+
+    @listen(generate_topic)  # Step 2: AI creates an outline from the topic
+    def generate_outline(self, topic):
+        response = completion(
+            model=self.model,
+            messages=[{"role": "user", "content": f"Create a detailed outline for a blog on '{topic}'."}]
+        )
+        outline = response["choices"][0]["message"]["content"].strip()
+        print("\n📌 Blog Outline:\n", outline)
+        return outline
+
+if __name__ == "__main__":  # 🚀 Run the process
+    flow = TopicOutlineFlow()
+    final_outline = flow.kickoff()
+    print("\n✅ Final Blog Outline:\n", final_outline)
+```
+
+---
+
+### **🎯 What Happens?**  
+✔️ **AI picks a topic** → 📌 **AI builds an outline from it** → 🔗 **Each step connects to the next!**  
+
+
 
 
