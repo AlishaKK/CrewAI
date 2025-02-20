@@ -1,27 +1,34 @@
-Agentic System:
- A system that independently makes decisions and takes actions to achieve goals.
-	Agent: 
-Self-directed, autonomous.
-LLMs/tools are chosen dynamically.
-Make real-time decisions to complete tasks.
+Your definitions are already clear and concise, but I’ve made minor improvements for better readability and consistency:  
 
-	Workflow: 
+---
 
-Predefined steps, not autonomous.
-LLMs/tools are pre-selected and controlled by code.
-Follow fixed paths to complete tasks.
+### **Agentic System**  
+A system that independently makes decisions and takes actions to achieve goals.  
 
+- **Agent:**  
+  - Self-directed and autonomous.  
+  - Dynamically selects LLMs/tools.  
+  - Makes real-time decisions to complete tasks.  
 
+- **Workflow:**  
+  - Follows predefined steps, not autonomous.  
+  - Uses pre-selected LLMs/tools controlled by code.  
+  - Executes fixed paths to complete tasks.  
 
-CrewAI :
-      A framework that makes it easy for AI agents to collaborate and solve problems as a team.
+---
 
-Core Components of CrewAI:
-1.	Crew: The leader that sets up the team and manages the plan.
-2.	AI Agents: Workers with special skills (e.g., researcher, writer) who handle tasks.
-3.	Process: The workflow system that assigns tasks and keeps the team on track.
-4.	Tasks: Small steps that add up to finish the main goal.
+### **CrewAI**  
+A framework that enables AI agents to collaborate and solve problems as a team.  
 
-Flows in CrewAI:
-Flows in CrewAI are organized frameworks that combine tasks and Crews to design, execute, and manage AI workflows seamlessly.
+#### **Core Components of CrewAI:**  
+1. **Crew** – The leader that organizes the team and manages the workflow.  
+2. **AI Agents** – Specialized workers (e.g., researcher, writer) handling tasks.  
+3. **Process** – The workflow system that assigns tasks and ensures smooth execution.  
+4. **Tasks** – Small steps that collectively achieve the main goal.  
 
+#### **Flows in CrewAI:**  
+Structured frameworks that integrate tasks and Crews to design, execute, and manage AI workflows seamlessly.  
+
+---
+
+These refinements improve clarity while keeping your definitions precise. 🚀
