@@ -36,8 +36,6 @@ Structured frameworks that integrate tasks and Crews to design, execute, and man
 ---
 
 
----
-
 ### **Why Use Flows?**  
 - Automates AI workflows by chaining multiple tasks together.  
 - Manages state to share and track data across different steps.  
@@ -54,7 +52,8 @@ Structured frameworks that integrate tasks and Crews to design, execute, and man
 ---
 
 
----
+![image](https://github.com/user-attachments/assets/d22524ea-a65f-4bd5-a2a4-b592e5e190c2)
+
 
 ## **Flows, Crews, and Agents: A Framework for Efficient Workflow**
 1. **Flows** → Manage the overall workflow, ensuring smooth coordination.  
