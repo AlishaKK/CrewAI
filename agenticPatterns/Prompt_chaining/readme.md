@@ -1,3 +1,5 @@
+
+
 ### **Prompt Chaining – Simple Explanation**  
 
 **What is it?**  
@@ -22,53 +24,9 @@ Prompt chaining breaks a big task into **smaller, connected steps**, where each 
 2️⃣ **Document Writing Process**  
    - First LLM: Creates an outline.  
    - "Gate" checks if the outline is good.  
-   - Second LLM: Writes the full document based on the outline.  
+   - Second LLM: Writes the full document based on the outline.
 
-It’s like **following a step-by-step recipe** instead of making everything at once! 🍽️🚀
 
-Here's the updated code with an additional function, `generate_intro`, that generates an introduction for the blog post based on the generated outline.
 
-Now, the flow includes an additional step where it generates an introduction for the blog post based on the outline. Let me know if you need further refinements! 🚀
-
-from crewai.flow.flow import Flow, start, listen
-from litellm import completion  # Replace with your preferred LLM API client
-
-class TopicOutlineFlow(Flow):
-    model = "gpt-4o-mini"
-
-    @start()
-    def generate_topic(self):
-        # Prompt the LLM to generate a blog topic.
-        response = completion(
-            model=self.model,
-            messages=[{
-                "role": "user",
-                "content": "Generate a creative blog topic for 2025."
-            }]
-        )
-        topic = response["choices"][0]["message"]["content"].strip()
-        print(f"Generated Topic: {topic}")
-        return topic
-
-    @listen(generate_topic)
-    def generate_outline(self, topic):
-        # Now chain the output by using the topic in a follow-up prompt.
-        response = completion(
-            model=self.model,
-            messages=[{
-                "role": "user",
-                "content": f"Based on the topic '{topic}', create a detailed outline for a blog post."
-            }]
-        )
-        outline = response["choices"][0]["message"]["content"].strip()
-        print("Generated Outline:")
-        print(outline)
-        return outline
-
-if __name__ == "__main__":
-    flow = TopicOutlineFlow()
-    final_outline = flow.kickoff()
-    print("Final Output:")
-    print(final_outline)
 
 
