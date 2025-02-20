@@ -102,5 +102,52 @@ The `@persist` decorator saves the state of your flow, ensuring it remains intac
 
 ---
 
+# **Creating a CrewAI Flow with LiteLLM**  
+
+### **1️⃣ Create Flow**  
+```bash
+crewai create flow <flow_name>
+```
+
+### **2️⃣ Setup**  
+- `crews/` → Define agents & tasks.  
+- `main.py` → Build Flow using `@start` & `@listen`.  
+
+### **3️⃣ Install & Run**  
+```bash
+uv venv && source .venv/bin/activate  # Create & activate virtual env  
+uv add litellm  # Install LiteLLM  
+uv run kickoff  # Run Flow  
+```
+
+---
+
+## **LiteLLM Integration in CrewAI**  
+**Install:**  
+```bash
+uv add litellm
+```
+
+**Use in `main.py`:**  
+```python
+from crewai.flow.flow import Flow, start, listen
+from litellm import completion  
+
+class MyFlow(Flow):
+    model = "gpt-4o-mini"
+
+    @start()
+    def generate_text(self):
+        return completion(model=self.model, messages=[{"role": "user", "content": "Blog idea for 2025?"}])["choices"][0]["message"]["content"].strip()
+
+    @listen(generate_text)
+    def expand_idea(self, text):
+        return completion(model=self.model, messages=[{"role": "user", "content": f"Expand: {text}"}])["choices"][0]["message"]["content"].strip()
+
+if __name__ == "__main__":
+    print(MyFlow().kickoff())
+```
+
+✅ **LiteLLM Benefits:** Easy model switching, cost-efficient, Gemini-compatible. 🚀
 
 
